@@ -40,4 +40,11 @@ class Curso implements Pontuavel
     {
         return 100;
     }
+
+    public function assistir(): void
+    {
+        foreach ($this->recuperarVideos () as $video) {
+            $video->assistir ();
+        }
+    }
 }
